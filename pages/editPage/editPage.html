@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Website</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="createArea">
+      <form>
+        <div class="field">
+          <label for="fName">First Name:</label>
+          <input id="fName" type="text" />
+        </div>
+
+        <div class="field">
+          <label for="lName">Last Name:</label> <input id="lName" type="text" />
+        </div>
+        <div class="field">
+          <label for="email">Email:</label> <input id="email" type="email" />
+        </div>
+        <div class="field">
+          <label for="address">Address:</label>
+          <input id="address" type="text" />
+        </div>
+        <div class="field">
+          <label for="city">City:</label> <input id="city" type="text" />
+        </div>
+        <div class="field">
+          <label for="state">State:</label> <input id="state" type="text" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone:</label>
+          <input id="phone" type="text" />
+        </div>
+        <div class="field">
+          <label for="color">Favorite Color:</label>
+          <input id="color" type="text" />
+        </div>
+        <div class="field">
+          <label for="pet">First Pet Name:</label>
+          <input id="pet" type="text" />
+        </div>
+        <div class="field">
+          <label for="birth">Place of Birth:</label>
+          <input id="birth" type="text" />
+        </div>
+
+        <input id="submit" type="submit" />
+        <button id="edit">Edit</button>
+      </form>
+    </div>
+
+    <script src="lib/jquery-3.6.1.min.js"></script>
+    <script type="module" src="app/app.js"></script>
+  </body>
+</html>

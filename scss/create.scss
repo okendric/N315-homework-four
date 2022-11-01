@@ -1,0 +1,110 @@
+.createArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    form {
+        margin-top: 100px;
+        width: 800px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .field {
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+
+            label {
+                color: white;
+                -webkit-text-stroke: 3px rgb(4, 4, 70);
+                font-size: 50px;
+                font-family: 'Bubblegum Sans', cursive;
+            }
+
+            input {
+                height: 50px;
+                width: 500px;
+                font-size: 40px;
+                font-family: 'Bubblegum Sans', cursive;
+            }
+        }
+
+      #submit {
+        width: 200px;
+        height: 50px;
+        font-size: 35px;
+        font-family: 'Bubblegum Sans', cursive;
+        color: #4178ee;
+        background-color: white;
+        cursor: pointer;
+        margin-bottom: 70px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: rgb(175, 164, 149);
+        }
+      }
+
+      #edit {
+        width: 200px;
+        height: 50px;
+        font-size: 35px;
+        font-family: 'Bubblegum Sans', cursive;
+        color: #4178ee;
+        background-color: white;
+        cursor: pointer;
+        margin-bottom: 70px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: rgb(175, 164, 149);
+        }
+      }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .createArea {
+    
+        form {
+            display: flex;
+            align-items: center;
+            max-width: 100px;
+
+            .field { 
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+
+            #submit {
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .createArea {
+    
+        form {
+            display: flex;
+            align-items: center;
+            max-width: 100px;
+            
+            .field { 
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+                input {
+                    width: 400px;
+                }
+            }
+        }
+    }
+}

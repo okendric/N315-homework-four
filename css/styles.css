@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+}
+
+html {
+  background-color: #4178ee;
+}
+
+.home {
+  max-width: 1920px;
+  height: 927px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home .hero {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .hero h1 {
+  color: white;
+  -webkit-text-stroke: 3px black;
+  font-size: 200px;
+  font-family: "Bubblegum Sans", cursive;
+}
+
+@media only screen and (max-width: 1230px) {
+  .home .hero h1 {
+    font-size: 150px;
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .home .hero h1 {
+    font-size: 100px;
+    -webkit-text-stroke: 2px black;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .home .hero h1 {
+    font-size: 80px;
+    -webkit-text-stroke: 2px black;
+  }
+}
+nav {
+  height: 60px;
+  background-color: darkblue;
+  display: flex;
+  position: fixed;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 99;
+}
+nav .bars {
+  margin-right: 20px;
+  right: 0;
+  position: absolute;
+  display: none;
+}
+nav .bars .bar {
+  display: block;
+  width: 35px;
+  height: 5px;
+  margin: 10px 10px;
+  margin-top: 7px;
+  background-color: black;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  z-index: 99;
+}
+nav .bars.active .bar:nth-child(2) {
+  opacity: 0;
+}
+nav .bars.active .bar:nth-child(1) {
+  transform: translateY(19.5px) rotate(45deg);
+}
+nav .bars.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+nav .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  background-color: darkblue;
+  height: 50px;
+  width: 100vw;
+  transition: height 0s, opacity 0.4s ease-in;
+}
+nav .links a {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+nav .links.active {
+  height: 100vh;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 960px) {
+  nav .bars {
+    display: block;
+    cursor: pointer;
+  }
+  nav .links {
+    margin-top: 900px;
+    flex-direction: column;
+    opacity: 0;
+    height: 0;
+  }
+}
+@media only screen and (max-width: 620px) {
+  nav a {
+    font-size: 30px;
+  }
+}
+.createArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.createArea form {
+  margin-top: 100px;
+  width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.createArea form .field {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+.createArea form .field label {
+  color: white;
+  -webkit-text-stroke: 3px rgb(4, 4, 70);
+  font-size: 50px;
+  font-family: "Bubblegum Sans", cursive;
+}
+.createArea form .field input {
+  height: 50px;
+  width: 500px;
+  font-size: 40px;
+  font-family: "Bubblegum Sans", cursive;
+}
+.createArea form #submit {
+  width: 200px;
+  height: 50px;
+  font-size: 35px;
+  font-family: "Bubblegum Sans", cursive;
+  color: #4178ee;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+.createArea form #submit:hover {
+  background-color: rgb(175, 164, 149);
+}
+.createArea form #edit {
+  width: 200px;
+  height: 50px;
+  font-size: 35px;
+  font-family: "Bubblegum Sans", cursive;
+  color: #4178ee;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+.createArea form #edit:hover {
+  background-color: rgb(175, 164, 149);
+}
+
+@media only screen and (max-width: 875px) {
+  .createArea form {
+    display: flex;
+    align-items: center;
+    max-width: 100px;
+  }
+  .createArea form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .createArea form #submit {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .createArea form {
+    display: flex;
+    align-items: center;
+    max-width: 100px;
+  }
+  .createArea form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .createArea form .field input {
+    width: 400px;
+  }
+}
+.accountArea {
+  width: 100%;
+  height: 877px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.accountArea .logIn {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.accountArea .logIn .login-labeltext label {
+  color: white;
+  font-size: 30px;
+  font-family: "Bubblegum Sans", cursive;
+}
+.accountArea .logIn .login-labeltext input {
+  font-family: "Bubblegum Sans", cursive;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+}
+.accountArea .logIn .login-titleText {
+  font-family: "Bubblegum Sans", cursive;
+  color: white;
+  font-size: 30px;
+  -webkit-text-stroke: 2px black;
+}
+.accountArea .logIn button {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 2px;
+  font-family: "Bubblegum Sans", cursive;
+  color: #4178ee;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+.accountArea .logIn button:hover {
+  background-color: rgb(175, 164, 149);
+}
+.accountArea .createAccount {
+  margin-top: -100px;
+  margin-bottom: -50px;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.accountArea .createAccount .create-labeltext {
+  display: flex;
+  justify-content: space-between;
+}
+.accountArea .createAccount .create-labeltext label {
+  color: white;
+  font-size: 30px;
+  font-family: "Bubblegum Sans", cursive;
+}
+.accountArea .createAccount .create-labeltext input {
+  font-family: "Bubblegum Sans", cursive;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+}
+.accountArea .createAccount .create-titleText {
+  font-family: "Bubblegum Sans", cursive;
+  color: white;
+  font-size: 30px;
+  -webkit-text-stroke: 2px black;
+}
+.accountArea .createAccount button {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-top: 2px;
+  font-family: "Bubblegum Sans", cursive;
+  color: #4178ee;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+.accountArea .createAccount button:hover {
+  background-color: rgb(175, 164, 149);
+}
+
+@media only screen and (max-width: 990px) {
+  .accountArea {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
