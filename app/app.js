@@ -74,7 +74,7 @@ function changeRoute(){
         });
 
     } else {
-        $.get(`pages/homePage/homepage.html`, function(data){
+        $.get(`pages/homePage/homePage.html`, function(data){
             //console.log("data " + data);
             $("#app").html(data);
             $("#submit").click(function (e) {
